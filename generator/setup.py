@@ -10,12 +10,12 @@ setup(
         'Programming Language :: Python :: 3.6'
     ],
     install_requires=[
-        '',
-        ''
+        'random',
+        'string'
     ],
     entry_points={
         'console_scripts': [
-            's = generator.__main__:main'
+            'generate = generator.__main__:main'
         ]
     },
     packages=['password_gen'])

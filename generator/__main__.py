@@ -1,8 +1,8 @@
 from sys import argv, stderr, exit
 import generator
 
-def __main__():
+def main():
     generator.generate()
 
-#if __name__=="__main__":
-#    __main__()
+if __name__=="__main__":
+    main()
