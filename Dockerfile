@@ -2,10 +2,13 @@
 FROM debian:stretch
 
 
-RUN  apt install -y   git \
+RUN  apt-get update -y && apt install -y   git \
 	  python3-dev libncurses5-dev libxml2-dev \
 	  libedit-dev swig doxygen graphviz xz-utils ninja-build
 
+
+RUN echo "deb http://ftp.de.debian.org/debian stretch main" >> /etc/apt/source.list
+RUN apt-get update && apt-get install -y openjdk-8-jre openjdk-8-jdk
 # Clang 8 as a compiler
 RUN apt-get update && apt-get install -y \
   xz-utils \
